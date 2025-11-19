@@ -1,9 +1,9 @@
-name: Deploy multiple Slidev lectures (root-level md files)
+name: Deploy multiple Slidev lectures with Yarn
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -16,20 +16,23 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
 
-      - name: Install Slidev
-        run: npm install -g @slidev/cli
+      - name: Install Yarn
+        run: npm install -g yarn
 
-      - name: Install dependencies (if package.json exists)
+      - name: Install dependencies
         run: |
           if [ -f "package.json" ]; then
-            npm install
+            yarn install
           fi
 
-      - name: Build all root .md slide files
+      - name: Install Slidev CLI
+        run: yarn global add @slidev/cli
+
+      - name: Build all root-level .md files
         run: |
-          mkdir dist
+          mkdir -p dist
           for file in *.md; do
             [ -f "$file" ] || continue
             name=$(basename "$file" .md)

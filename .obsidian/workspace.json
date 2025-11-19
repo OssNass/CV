@@ -16,23 +16,8 @@
               "icon": "lucide-file",
               "title": "New tab"
             }
-          },
-          {
-            "id": "ed90eec415205af9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lecture 5.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lecture 5"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,8 +70,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -206,8 +190,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8b7f07601fe8120b",
+  "active": "a66a7018b6c6f3dd",
   "lastOpenFiles": [
+    "Lecture 1.md",
+    "Lecture 1",
+    "Lecture 5.md",
     "images/5/gmr-graph.png",
     "images/5/Pasted image.png",
     "images/5/gmr-steps.png",
@@ -218,9 +205,7 @@
     "images/5/sc-center.png",
     "images/5/gc.png",
     "images/5/ws-ex.png",
-    "images/5/ws.png",
     "images/5",
-    "Lecture 1.md",
     "Lecture 3.md",
     "Lecture 4.md",
     "4/res.pdf",
@@ -232,7 +217,6 @@
     "slides.sh",
     "2",
     "node_modules/playwright-chromium/node_modules",
-    "node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule-C3UTv-Ge.css",
     "node_modules/playwright-core/README.md",
     "node_modules/playwright-chromium/README.md",
     "Syllabus.md",
@@ -252,7 +236,6 @@
     "node_modules/wrap-ansi-cjs/readme.md",
     "node_modules/which/CHANGELOG.md",
     "node_modules/which/README.md",
-    "node_modules/ts-interface-checker/README.md",
-    "node_modules/slidev-theme-rainforest/node_modules/@slidev/types/README.md"
+    "node_modules/ts-interface-checker/README.md"
   ]
 }

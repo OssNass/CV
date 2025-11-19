@@ -33,7 +33,7 @@ jobs:
       - name: Build all root-level .md files
         run: |
           mkdir -p dist
-          for file in *.md; do
+          for file in Lecture*.md; do
             [ -f "$file" ] || continue
             name=$(basename "$file" .md)
             echo "Building $file → dist/$name"

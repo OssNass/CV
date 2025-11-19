@@ -4,59 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "d690f593d83f2ebd",
+        "id": "29ef0bfb4ce5403a",
         "type": "tabs",
-        "dimension": 27.189086294416242,
         "children": [
           {
-            "id": "9c08b4cebe4bd8f4",
+            "id": "a66a7018b6c6f3dd",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "ed90eec415205af9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "Lecture 5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Lecture 5"
             }
           }
-        ]
-      },
-      {
-        "id": "467e006616198a60",
-        "type": "tabs",
-        "dimension": 27.189086294416242,
-        "children": [
-          {
-            "id": "80bd7abb6a16b024",
-            "type": "leaf",
-            "state": {
-              "type": "reveal-preview-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Slide Preview"
-            }
-          }
-        ]
-      },
-      {
-        "id": "c97a5a63eb64b837",
-        "type": "tabs",
-        "dimension": 45.621827411167516,
-        "children": [
-          {
-            "id": "28e7aa29eb919adf",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +85,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -229,11 +206,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "80bd7abb6a16b024",
+  "active": "8b7f07601fe8120b",
   "lastOpenFiles": [
+    "images/5/gmr-graph.png",
+    "images/5/Pasted image.png",
+    "images/5/gmr-steps.png",
+    "images/5/sm-ex.png",
+    "images/5/sp-example.png",
+    "images/5/sp-center-km.png",
+    "images/5/sp-center.png",
+    "images/5/sc-center.png",
+    "images/5/gc.png",
+    "images/5/ws-ex.png",
+    "images/5/ws.png",
+    "images/5",
+    "Lecture 1.md",
+    "Lecture 3.md",
+    "Lecture 4.md",
+    "4/res.pdf",
+    "4",
+    "images/4",
+    "3/res.pdf",
+    "3",
+    "Lecture 2.md",
+    "slides.sh",
+    "2",
+    "node_modules/playwright-chromium/node_modules",
+    "node_modules/playwright-core/lib/vite/recorder/assets/codeMirrorModule-C3UTv-Ge.css",
+    "node_modules/playwright-core/README.md",
+    "node_modules/playwright-chromium/README.md",
     "Syllabus.md",
-    "Untitled.md",
-    "Welcome.md",
-    "Untitled.base"
+    "Lecture 2 (Copy).md",
+    "slides.md",
+    "node_modules/slidev-theme-rockdove/node_modules/@slidev/types/README.md",
+    "node_modules/slidev-theme-rockdove/example.md",
+    "node_modules/slidev-theme-rockdove/README.md",
+    "node_modules/@iconify-json/solar/README.md",
+    "node_modules/tailwindcss/src/postcss-plugins/nesting/README.md",
+    "node_modules/tailwindcss/lib/postcss-plugins/nesting/README.md",
+    "node_modules/tailwindcss/src/value-parser/README.md",
+    "node_modules/tailwindcss/lib/value-parser/README.md",
+    "node_modules/wrap-ansi-cjs/node_modules/strip-ansi/readme.md",
+    "node_modules/wrap-ansi-cjs/node_modules/ansi-styles/readme.md",
+    "node_modules/wrap-ansi-cjs/node_modules/string-width/readme.md",
+    "node_modules/wrap-ansi-cjs/readme.md",
+    "node_modules/which/CHANGELOG.md",
+    "node_modules/which/README.md",
+    "node_modules/ts-interface-checker/README.md",
+    "node_modules/slidev-theme-rainforest/node_modules/@slidev/types/README.md"
   ]
 }

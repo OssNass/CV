@@ -1,0 +1,46 @@
+name: Deploy multiple Slidev lectures (root-level md files)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Slidev
+        run: npm install -g @slidev/cli
+
+      - name: Install dependencies (if package.json exists)
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+          fi
+
+      - name: Build all root .md slide files
+        run: |
+          mkdir dist
+          for file in *.md; do
+            [ -f "$file" ] || continue
+            name=$(basename "$file" .md)
+            echo "Building $file → dist/$name"
+            slidev build "$file" \
+              --out "dist/$name" \
+              --base "/${{ github.event.repository.name }}/$name/"
+          done
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

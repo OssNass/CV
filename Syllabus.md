@@ -1,4 +1,4 @@
-# 1. Introduction to Computer Vision
+# [[Lecture 1]]. Introduction to Computer Vision
 1. What is computer vision
 2. Basic digital image operations:
 	1. Image representation
@@ -13,7 +13,7 @@
 		1. Noise
 		2. DeNoise
 
-# 2. Edge Detection, Fourier Transformation, Wavelets & Threshold
+# [[Lecture 2]]. Edge Detection, Fourier Transformation, Wavelets & Threshold
 1. Edge Detection Filters
 	1. Sobel
 	2. Prewitt

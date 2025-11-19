@@ -1,3 +1,8 @@
 {
-  "showLineNumber": true
+  "showLineNumber": true,
+  "spellcheckDictionary": [
+    "zxczxc",
+    "Derivetive",
+    "GraphCut"
+  ]
 }

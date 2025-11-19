@@ -3,7 +3,7 @@ name: Deploy multiple Slidev lectures (root-level md files)
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:

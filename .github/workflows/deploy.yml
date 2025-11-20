@@ -1,5 +1,9 @@
 name: Deploy multiple Slidev lectures with Yarn (Node 22)
 
+permissions:
+  contents: write
+  pages: write
+  
 on:
   push:
     branches:

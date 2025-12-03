@@ -568,7 +568,7 @@ $$
 $$
 w_{i,j}=exp(-\frac{||c_i-c_j||^2}{\sigma^2})
 $$
-Only for connected pairs (others = 0). Use $\sigma^2=0.1$ as default.
+	- Only for connected pairs (others = 0). Use $\sigma^2=0.1$ as default.
 4. Compute degree matrix $D = \mathrm{diag}$  where $d_{ii}=\sum_j w_{ij}$
 ---
 

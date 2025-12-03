@@ -374,7 +374,7 @@ $$
 $$
 Z^L=a^{L-1}w^L+b^L
 \\
-\frac{\delta Z^L}{\delta w^L}=a^{L-1}
+\frac{\delta Z^L}{\delta w^L}=y^{L-1}
 $$
 </div>
 <div v-click="3">
@@ -407,7 +407,7 @@ E=\frac{1}{2}(y^e_i-y^a_i)^2
 \frac{\delta y_a^L}{\delta Z^L}=f'(Z^L)
 \\
 \\
-\frac{\delta Z^L}{\delta w^L}=a^{L-1}
+\frac{\delta Z^L}{\delta w^L}=y^{L-1}
 \\
 $$
 </div>
@@ -427,7 +427,7 @@ E=\frac{1}{2}(y^e_i-y^a_i)^2
 \frac{\delta E}{\delta w^L}=\frac{\delta E}{\delta y_a^L}\frac{\delta y_a^L}{\delta Z^L}\frac{\delta Z^L}{\delta w^L}
 \\
 \\
-\frac{\delta E}{\delta w^L}=(y^e_i-y^a_i)f'(Z^L)a^{L-1}
+\frac{\delta E}{\delta w^L}=(y^e_i-y^a_i)f'(Z^L)y^{L-1}
 $$
 </div>
 <div>

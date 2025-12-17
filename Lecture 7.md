@@ -2,10 +2,10 @@
 theme: rockdove
 class: text-center
 transition: slide-left
-title: "Lecture 8: Introduction To Neural Networks"
+title: "Lecture 7: Introduction To Neural Networks"
 mdc: true
 author: Dr. Ossama Nasser
-exportFilename: "8"
+exportFilename: "7"
 layout: cover
 ---
 # Computer Vision

@@ -9,7 +9,7 @@ exportFilename: "8"
 layout: cover
 ---
 # Computer Vision
-## Lecture 7  
+## Lecture 8
 ### Convolutional Neural Networks
 ---
 

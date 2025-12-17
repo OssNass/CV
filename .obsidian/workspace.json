@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lecture 7.md",
+                "file": "Lecture 8.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 7"
+              "title": "Lecture 8"
             }
           }
         ]
@@ -196,34 +196,35 @@
   },
   "active": "a66a7018b6c6f3dd",
   "lastOpenFiles": [
+    "images/8/dlcnn.png",
+    "images/8/dlcnn.png.part",
+    "images/8/dlch.png",
+    "images/8/dlvsml.png",
+    "images/8/dlvsml.png.part",
+    "images/8/dl.png",
+    "images/8/dl.png.part",
+    "images/8/ps.png",
+    "images/8/filters.png",
+    "images/8/lu80392jmpy1.tmp",
+    "images/8/CNN.jpg",
+    "images/8",
+    "images/7/8/CNN.jpg",
+    "images/7/8/lu80392jmpxz.tmp",
+    "images/7/8",
+    "Lecture 7.md",
+    "Lecture 6.md",
+    "Lecture 8.md",
     "images/7/tanh.png",
     "images/7/Pasted image.png",
     "images/7/sigmoid.png",
-    "images/7/bp.png",
-    "images/7/deepseekr1.png",
-    "images/7/mlp.png",
-    "images/7/rnn-w.png",
-    "images/7/rnn.png",
-    "images/7/ran.png",
     "images/7",
-    "Lecture 6.md",
-    "Lecture 7.md",
     "Lecture 5.md",
-    "images/6/distance.png",
-    "images/6/Pasted image.png",
     "images/6",
     "Lecture 1.md",
     "Lecture 1",
-    "images/5",
     "Lecture 3.md",
     "Lecture 4.md",
-    "4/res.pdf",
-    "4",
-    "images/4",
-    "3/res.pdf",
-    "3",
     "Lecture 2.md",
-    "slides.sh",
     "node_modules/playwright-core/README.md",
     "node_modules/playwright-chromium/README.md",
     "Syllabus.md",
@@ -240,7 +241,6 @@
     "node_modules/wrap-ansi-cjs/node_modules/strip-ansi/readme.md",
     "node_modules/wrap-ansi-cjs/node_modules/ansi-styles/readme.md",
     "node_modules/wrap-ansi-cjs/node_modules/string-width/readme.md",
-    "node_modules/wrap-ansi-cjs/readme.md",
-    "node_modules/which/CHANGELOG.md"
+    "node_modules/wrap-ansi-cjs/readme.md"
   ]
 }

@@ -196,12 +196,8 @@ $$
 - The number of removed pixels depends on the filter size.
 - For a $5 \times 5$ filter:
 	- 4 pixels are removed from each side
-- Pixels with value 0 are added to each side:
-
-$$
-p = \frac{f - 1}{2}
-$$
----
+- Pixels with value 0 are added to each side
+- ---
 
 # Convolutional Layer
 ## Depth

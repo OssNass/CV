@@ -1,2 +1,6 @@
 node_modules
 .obsidian
+.idea/.gitignore
+.idea/CV.iml
+.idea/modules.xml
+.idea/vcs.xml

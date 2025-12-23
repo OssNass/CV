@@ -34,7 +34,7 @@ layout: cover
 - CNNs encode primitive shapes in early layers and more complex shapes in later layers.
 </div>
 <div>
-<img src="./images/8/CNN.jpg" style="width: 80%">
+<img src="./images/8/CNN.jpg" style="width: 70%">
 </div>
 </div>
 ---
@@ -52,7 +52,7 @@ layout: cover
 	- Final shapes
 </div>
 <div>
-<img src="./images/8/CNN.jpg" style="width: 80%">
+<img src="./images/8/CNN.jpg"  style="width: 70%">
 </div>
 </div>
 ---

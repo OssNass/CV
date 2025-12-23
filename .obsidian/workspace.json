@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lecture 1.md",
+                "file": "Lecture 9.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 1"
+              "title": "Lecture 9"
             }
           }
         ]
@@ -197,29 +197,30 @@
   },
   "active": "b6b9e49416f19ec8",
   "lastOpenFiles": [
-    "images/1/loge.png",
-    "images/1/loge.png.part",
-    "images/1/log.png",
-    "images/1/doge.png",
-    "images/1/doge.png.part",
     "Pasted image 20251218223842.png",
     "Pasted image 20251218223832.png",
-    "images/1/dog.png",
-    "images/1/sp-removed.png",
-    "images/1/sp-removed.png.part",
-    "images/1/gn-removed.png",
-    "images/1/gn-removed.png.part",
-    "images/1/gaussian-filter.png",
-    "images/1/noise.png",
-    "images/1/noise.png.part",
-    "images/1/sobel.png",
-    "images/1/speckle-noise-f.png.part",
-    "images/1/speckle-noise.png.part",
-    "images/1/snp-noise-f2.png.part",
-    "images/1/snp-noise-f.png.part",
-    "images/1/snp-noise.png.part",
-    "Lecture 1.md",
+    "images/9/LSTM-BIDI.jpg",
+    "images/9/lu1662781galdl.tmp",
+    "images/9/LSTM.png",
+    "images/9/Screenshot_2025-12-23_18-04-06.png",
+    "images/9/RNN-BiDi.jpg",
+    "images/9/lu1662781gaktw.tmp",
+    "images/9/RNN-M.jpg",
+    "images/9/lu1662781gaknn.tmp",
+    "Pasted image 20251223170834.png",
+    "images/9/RNN-IO.jpg",
+    "images/9/lu1662781gakl6.tmp",
+    "images/9/RNN-P.jpg",
+    "images/9/lu1662781gakb2.tmp",
+    "images/9/RNN-E2.jpg",
+    "images/9/lu1662781gak84.tmp",
+    "images/9/lu1662781gak6x.tmp",
+    "images/9",
     "Lecture 8.md",
+    "Lecture 9.md",
+    "Lecture 1.md",
+    "8.pdf",
+    "5.pdf",
     "Syllabus.md",
     "Lecture 2.md",
     "Lecture 7.md",
@@ -241,7 +242,6 @@
     "node_modules/tailwindcss/lib/value-parser/README.md",
     "node_modules/wrap-ansi-cjs/node_modules/strip-ansi/readme.md",
     "node_modules/wrap-ansi-cjs/node_modules/ansi-styles/readme.md",
-    "node_modules/wrap-ansi-cjs/node_modules/string-width/readme.md",
-    "node_modules/wrap-ansi-cjs/readme.md"
+    "node_modules/wrap-ansi-cjs/node_modules/string-width/readme.md"
   ]
 }

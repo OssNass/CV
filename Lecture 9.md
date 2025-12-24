@@ -192,7 +192,7 @@ $$
 - We define the hidden-layer output matrix $w_{hy}$ that feeds into the output layer as having dimensions $d \times p$.
 - Thus, the previously defined functions take the following form.
 $$
-h_t=tanh(w_{xh}x_y+w_hhh_{t-1})
+h_t=tanh(w_{xh}x_y+w_{hh}h_{t-1})
 \\
 y_t=w_{hy}h_t
 $$
@@ -349,7 +349,7 @@ $$
 # Input Gate
 - Determines what new information is stored.
 $$
-i_t=\sigma(w_i[h_{t-1}x,x_t]+b_i)
+i_t=\sigma(w_i[h_{t-1},x_t]+b_i)
 \\
 \tilde C=tanh(w_c[h_{t-1},x_t]+b_c)
 \\
@@ -376,7 +376,7 @@ $$
 
 # LSTM 
 ## Structure
-# Input Gate
+# Output Gate
 
 - Determines the output of the cell.
 $$
@@ -407,7 +407,7 @@ $$
 ---
 
 # Now What?
-- Now we simply use CNN to feed data to either a RNN or LSTM
+- Now we simply use CNN (without the MLP layer, just the convolutional layers) to feed data to either a RNN or LSTM
 - CNN does have a fixed output size, as a result we can have a RNN or LSTM with multiple inputs (not just one) and pass `visual words` to these networks
 - As a result we get to have the effectiveness of CNN feature extraction capabilities from complex structure like an image and the memory capability of RNN/LSTM allowing us to process videos.
 - Another way is to use VLM (Visual Language Models) which are based on a similar concept used by LLMs (Large Language Models: GPT-O4, Gemini, Claude Sonet,..etc)  but for images.

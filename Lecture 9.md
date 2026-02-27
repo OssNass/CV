@@ -78,7 +78,7 @@ layout: cover
 - What distinguishes it is that the hidden layer output feeds the next time step through the weight $w_{hh}$
 </div>
 <div>
-<img src="./images/9/RNN.jpg">
+<img src="./images/9/RNN.jpg" style="width: 90%">
 </div>
 </div>
 ---
@@ -309,7 +309,7 @@ _"Selecting the left branch at the fork was a mistake, and I should have underst
 
 # LSTM 
 ## Structure
-<img src="./images/9/LSTM.png">
+<img src="./images/9/LSTM.png" style="width:70%">
 
 ---
 

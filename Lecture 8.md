@@ -34,7 +34,7 @@ layout: cover
 - CNNs encode primitive shapes in early layers and more complex shapes in later layers.
 </div>
 <div>
-<img src="./images/8/CNN.jpg" style="width: 70%">
+<img src="./images/8/CNN.jpg" style="width: 60%">
 </div>
 </div>
 ---
@@ -52,7 +52,7 @@ layout: cover
 	- Final shapes
 </div>
 <div>
-<img src="./images/8/CNN.jpg"  style="width: 70%">
+<img src="./images/8/CNN.jpg"  style="width: 60%">
 </div>
 </div>
 ---
@@ -197,7 +197,7 @@ $$
 - For a $5 \times 5$ filter:
 	- 4 pixels are removed from each side
 - Pixels with value 0 are added to each side
-- ---
+---
 
 # Convolutional Layer
 ## Depth
@@ -338,7 +338,7 @@ flowchart LR
 
 # Deep Learning
 ## Deep Learning vs Machine Learning
-<img src="./images/8/dlvsml.png">
+<img src="./images/8/dlvsml.png" style="width: 90%">
 ---
 
 # Deep Learning

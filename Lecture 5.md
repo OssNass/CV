@@ -496,7 +496,6 @@ $$
 ---
 
 # Salient Objects
-
 # FT-Based Saliency Maps
 - Saliency detection relies on global and local contrast: 
 	- Local contrast: difference between a pixel and its neighbors
@@ -506,7 +505,6 @@ $$
 
 # Salient Objects
 ## FT Algorithm
-
 - The FT algorithm relies on global contrast.
 - It operates by:
 	1. Applying a Gaussian filter
@@ -521,7 +519,6 @@ $$
 ---
 
 # GMR Algorithm (Graph-Based Manifold Ranking)
-
 ## Concept
 - treat saliency as a **ranking problem on a graph** of image superpixels:
 	- given a set of query nodes (background seeds or foreground seeds), rank every node by its relevance to those queries using **manifold ranking**.

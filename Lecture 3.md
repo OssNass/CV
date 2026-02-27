@@ -52,7 +52,7 @@ layout: cover
 </div>
 <div>
 
-<img src="./images/3/Morphology.png">
+<img src="./images/3/Morphology.png" style="width: 80%">
 </div>
 </div>
 ---
@@ -67,7 +67,7 @@ layout: cover
 	- As a result we see the transformation of the object A is being slimmed down, pixels not completely surrounding other pixels
 </div>
 <div>
-<img src="./images/3/example.png">
+<img src="./images/3/example.png" style="width: 80%">
 </div>
 </div>
 ---
@@ -87,42 +87,42 @@ $(B)_z=\{c | c=b+z, for~b \in B\}$
 
 An Exmaple
 
-<img src="./images/3/E1.png" style="height: 90%">
+<img src="./images/3/E1.png" style="width: 70%">
 ---
 
 # Morphology
 
 An Exmaple
 
-<img src="./images/3/E2.png" style="height: 90%">
+<img src="./images/3/E2.png" style="width: 80%">
 ---
 
 # Morphology
 
 An Exmaple
 
-<img src="./images/3/E3.png" style="height: 90%">
+<img src="./images/3/E3.png" style="width: 80%">
 ---
 
 # Morphology
 
 An Exmaple
 
-<img src="./images/3/E4.png" style="height: 90%">
+<img src="./images/3/E4.png" style="width: 80%">
 ---
 
 # Morphology
 
 An Exmaple
 
-<img src="./images/3/E5.png" style="height: 90%">
+<img src="./images/3/E5.png" style="width: 80%">
 ---
 
 # Morphology
 
 An Exmaple
 
-<img src="./images/3/E6.png" style="height: 90%">
+<img src="./images/3/E6.png" style="width: 80%">
 ---
 
 # Morphology
@@ -279,8 +279,9 @@ $$
 # BLOB
 ## Laplacian of Gaussian (LoG)
 - The Mexian Hat Shap is the shap of LoG
-<img src="./images/3/LoG.png" style="width: 75%">
+	<img src="./images/3/LoG.png" style="width: 60%">
 ---
+
 # BLOB
 ## Difference of Gaussian (DoG)
 - Principle:

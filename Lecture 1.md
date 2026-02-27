@@ -472,7 +472,7 @@ $$
 ## Band Pass Filters
 ### DoG
 - Difference of Gaussian (DoG): this filter applies two Gaussian filters with different strengths to the image and subtracts the results to obtain the band.
-<img src="./images/1/dog.jpg" style="width: 70%">
+<img src="./images/1/dog.jpg" style="width: 60%">
 ---
 
 # Edge Detection

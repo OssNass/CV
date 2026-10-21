@@ -7,6 +7,7 @@ mdc: true
 author: Dr. Ossama Nasser
 exportFilename: "1"
 layout: cover
+hideInToc: true
 addons:
   - slidev-component-progress
 lineNumbers: "true"

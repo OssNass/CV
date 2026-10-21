@@ -1,0 +1,1 @@
+var e=`/CV/Lecture-02/assets/goofy-BukHmWR7.png`;export{e as t};

@@ -2,27 +2,38 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Lectures</title>
+  <title>CV 2026-2027 Lectures</title>
   <style>
-    body { font-family: sans-serif; padding: 40px; }
-    h1 { margin-bottom: 20px; }
-    ul { line-height: 2; font-size: 1.2em; }
-    a { text-decoration: none; color: #0070f3; }
-    a:hover { text-decoration: underline; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 40px; max-width: 800px; margin: auto; color: #333; background-color: #f7f9fc; }
+    h1 { margin-bottom: 24px; border-bottom: 2px solid #e1e4e8; padding-bottom: 12px; color: #24292e; }
+    ul { list-style-type: none; padding: 0; }
+    li { background: #fff; margin-bottom: 12px; padding: 16px 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+    .lecture-title { font-weight: 600; font-size: 1.1em; color: #1f2328; }
+    .links { display: flex; gap: 8px; }
+    .links a { text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.9em; font-weight: 500; transition: background 0.2s; }
+    .html-btn { background-color: #0969da; color: #fff; }
+    .html-btn:hover { background-color: #0550ae; }
+    .pdf-btn { background-color: #cf222e; color: #fff; }
+    .pdf-btn:hover { background-color: #a40e14; }
   </style>
 </head>
 <body>
   <h1>Available Lectures</h1>
   <ul>
-              <li><a href="./Lecture 1/">Lecture 1</a></li>
-              <li><a href="./Lecture 2/">Lecture 2</a></li>
-              <li><a href="./Lecture 3/">Lecture 3</a></li>
-              <li><a href="./Lecture 4/">Lecture 4</a></li>
-              <li><a href="./Lecture 5/">Lecture 5</a></li>
-              <li><a href="./Lecture 6/">Lecture 6</a></li>
-              <li><a href="./Lecture 7/">Lecture 7</a></li>
-              <li><a href="./Lecture 8/">Lecture 8</a></li>
-              <li><a href="./Lecture 9/">Lecture 9</a></li>
+            <li>
+              <span class="lecture-title">Lecture-01</span>
+              <span class="links">
+                <a class="html-btn" href="./Lecture-01/">Browse HTML</a>
+                <a class="pdf-btn" href="./Lecture-01/Lecture-01.pdf">Download PDF</a>
+              </span>
+            </li>
+            <li>
+              <span class="lecture-title">Lecture-02</span>
+              <span class="links">
+                <a class="html-btn" href="./Lecture-02/">Browse HTML</a>
+                <a class="pdf-btn" href="./Lecture-02/Lecture-02.pdf">Download PDF</a>
+              </span>
+            </li>
   </ul>
 </body>
 </html>

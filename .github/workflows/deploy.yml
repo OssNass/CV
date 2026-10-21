@@ -31,35 +31,48 @@ jobs:
             pnpm install
           fi
 
-      - name: Install Slidev CLI
-        run: pnpm add @slidev/cli -g
+      - name: Install Slidev CLI & Playwright Chromium for PDF Export
+        run: |
+          pnpm add -g @slidev/cli playwright-chromium
+          npx playwright install chromium
 
-      - name: Build all root-level .md files
+      - name: Build HTML SPAs and Export PDFs for all Lecture*.md files
         run: |
           mkdir -p dist
           for file in Lecture*.md; do
             [ -f "$file" ] || continue
             name=$(basename "$file" .md)
-            echo "Building $file → dist/$name"
+            echo "Processing $file → dist/$name"
+            
+            # 1. Build the static HTML Single Page Application (SPA)
             slidev build "$file" \
               --out "dist/$name" \
               --base "/${{ github.event.repository.name }}/$name/"
+            
+            # 2. Export the lecture as a downloadable PDF file
+            slidev export "$file" --output "dist/$name/$name.pdf"
           done
 
-      - name: Generate index.html
+      - name: Generate index.html with HTML and PDF Options
         run: |
           cat > dist/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
           <head>
             <meta charset="UTF-8" />
-            <title>Lectures</title>
+            <title>CV 2026-2027 Lectures</title>
             <style>
-              body { font-family: sans-serif; padding: 40px; }
-              h1 { margin-bottom: 20px; }
-              ul { line-height: 2; font-size: 1.2em; }
-              a { text-decoration: none; color: #0070f3; }
-              a:hover { text-decoration: underline; }
+              body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 40px; max-width: 800px; margin: auto; color: #333; background-color: #f7f9fc; }
+              h1 { margin-bottom: 24px; border-bottom: 2px solid #e1e4e8; padding-bottom: 12px; color: #24292e; }
+              ul { list-style-type: none; padding: 0; }
+              li { background: #fff; margin-bottom: 12px; padding: 16px 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+              .lecture-title { font-weight: 600; font-size: 1.1em; color: #1f2328; }
+              .links { display: flex; gap: 8px; }
+              .links a { text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 0.9em; font-weight: 500; transition: background 0.2s; }
+              .html-btn { background-color: #0969da; color: #fff; }
+              .html-btn:hover { background-color: #0550ae; }
+              .pdf-btn { background-color: #cf222e; color: #fff; }
+              .pdf-btn:hover { background-color: #a40e14; }
             </style>
           </head>
           <body>
@@ -68,8 +81,17 @@ jobs:
           EOF
 
           for dir in dist/*/; do
+            [ -d "$dir" ] || continue
             name=$(basename "$dir")
-            echo "              <li><a href=\"./$name/\">$name</a></li>" >> dist/index.html
+            echo "            <li>" >> dist/index.html
+            echo "              <span class=\"lecture-title\">$name</span>" >> dist/index.html
+            echo "              <span class=\"links\">" >> dist/index.html
+            echo "                <a class=\"html-btn\" href=\"./$name/\">Browse HTML</a>" >> dist/index.html
+            if [ -f "dist/$name/$name.pdf" ]; then
+              echo "                <a class=\"pdf-btn\" href=\"./$name/$name.pdf\">Download PDF</a>" >> dist/index.html
+            fi
+            echo "              </span>" >> dist/index.html
+            echo "            </li>" >> dist/index.html
           done
 
           cat >> dist/index.html << 'EOF'

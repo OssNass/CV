@@ -36,7 +36,7 @@ jobs:
 
       - name: Install Slidev CLI & Playwright Chromium for PDF Export
         run: |
-          pnpm add -g @slidev/cli playwright-chromium
+          npm install -g @slidev/cli playwright-chromium
           npx playwright install chromium
 
       - name: Build HTML SPAs and Export PDFs for all Lecture*.md files

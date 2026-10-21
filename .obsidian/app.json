@@ -1,8 +1,7 @@
 {
-  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
   "spellcheckDictionary": [
-    "zxczxc",
-    "Derivetive",
-    "GraphCut"
+    "Sobel",
+    "Prewitt"
   ]
 }

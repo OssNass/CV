@@ -7,6 +7,7 @@ mdc: true
 author: Dr. Ossama Nasser
 exportFilename: "2"
 layout: cover
+hideInToc: true
 addons:
   - slidev-component-progress
 lineNumbers: "true"
@@ -16,6 +17,13 @@ lineNumbers: "true"
 ## Lecture 2  
 ### Edge Detection
 
+---
+
+```yaml
+hideInToc: true
+```
+# Table of Conent
+<toc maxDepth="1"/>
 ---
 
 # What is Edge?
@@ -33,6 +41,9 @@ lineNumbers: "true"
 
 ---
 
+```yaml
+hideInToc: true
+```
 # Fourier Transformation
 - Fourier Transformation is a mathematical transformation in which we convert a signal from the temporal domain to the frequency domain
 - In the temporal domain we acquire the value of a signal
@@ -42,6 +53,9 @@ lineNumbers: "true"
 
 ---
 
+```yaml
+hideInToc: true
+```
 # Fourier Transformation
 ## Fast Fourier Transformation
 - The story about fast Fourier transformation is based on strict deadlines, nuclear weapons, USSR and USA
@@ -79,6 +93,9 @@ $$
 
 ---
 
+```yaml
+hideInToc: true
+```
 # Fourier Transformation
 ## Fast Fourier Transformation
 - We are dealing with images, a 2D signal, therefore we use 2D DFT:
@@ -96,6 +113,9 @@ F(u, v)\, e^{(j 2\pi \left( \frac{ux}{M} + \frac{vy}{N} \right))}
 $$
 ---
 
+```yaml
+hideInToc: true
+```
 # Fourier Transformation
 ## Fast Fourier Transformation
 - The problem with both FT and DFT is the calculation speed
@@ -108,6 +128,9 @@ $$
 	- It in the frequencies, which is where DFT is king
 ---
 
+```yaml
+hideInToc: true
+```
 # Fourier Transformation
 ## Fast Fourier Transformation
 - The problem was simple, calculations took too long to be done
@@ -119,6 +142,9 @@ $$
 	- We continue until we reach 2 values only, apply then return up until we calculate the entire point set
 ---
 
+```yaml
+hideInToc: true
+```
 # Fourier Transformation
 ## FT & Edges
 
@@ -137,6 +163,9 @@ $$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Fourier Transformation
 ## FT & Edges
 
@@ -153,6 +182,9 @@ $$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Fourier Transformation
 - To summarize:
 	- FT allows us to understand frequencies in signals
@@ -160,6 +192,9 @@ $$
 	- This can be very helpful when extracting information about the image, including but limited to edge detection and noise cancellation
 ---
 
+```yaml
+hideInToc: true
+```
 # Convolution and Correlation
 - 2 very important operations in Digital Signal Processing and by extension Digital Image Processing
 - Both of them calculate the amount of similarities between 2 different signals
@@ -167,6 +202,9 @@ $$
 - P.S.: In academic circles, when we are talking about Image Processing Convolution is the **same** as Correlation, but when talking about Signal Processing Convolution is **different** from Correlation
 ---
 
+```yaml
+hideInToc: true
+```
 # Convolution and Correlation
 ## The Math Behind It
 - When talking about these 2 concepts we need to have 2 signals:
@@ -193,6 +231,9 @@ $$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Convolution and Correlation
 ## The Math Behind It
 - Applying Correlation and Convolution on a signals
@@ -200,6 +241,9 @@ $$
 - Usually the filters in digital image processing are symmetric, hence correlation = convolution
 ---
 
+```yaml
+hideInToc: true
+```
 # Convolution and Correlation
 - What is so important about these 2 operations?
 - What if I told you applying filters to images depends on correlation! Interested, right?
@@ -209,6 +253,9 @@ $$
 - Meaning when the neighborhoods of similar values, it is full of low frequencies, while the neighborhoods of widely different values is full of high frequencies.
 ---
 
+```yaml
+hideInToc: true
+```
 # Convolution and Correlation
 ## Applying Filters
 - When A filter (kernel/mask) get applied to image, we apply on each pixel independently
@@ -231,6 +278,9 @@ $$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Convolution and Correlation
 ## Applying Filters
 <div grid="~ cols-2">
@@ -252,6 +302,9 @@ $$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Convolution and Correlation
 ## Applying Filters
 <div grid="~ cols-2">
@@ -287,6 +340,9 @@ $$
 
 ---
 
+```yaml
+hideInToc: true
+```
 # Image Gradient (Derivative)
 - If there are no big changes between neighboring pixels, the derivative is reaching to 0
 - If there are big changes, the derivative will show in difference as bright spot
@@ -297,6 +353,9 @@ $$
   In this case, we preserve the **large differences between image pixels**, and these differences **represent the edges**.
 ---
 
+```yaml
+hideInToc: true
+```
 # Image Gradient (Derivative)
 - Sobel, Prewitt and Scharr calculate the first derivative
 - Laplace calculate the second derivative
@@ -365,6 +424,9 @@ $$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Image Gradient (Derivative)
 ## Still It Makes No Sense
 - Still need a lot of explanation
@@ -378,6 +440,9 @@ $$
 - This is a modification of the standard derivative formula (first derivative)
 ---
 
+```yaml
+hideInToc: true
+```
 # Image Gradient (Derivative)
 ## Still It Makes No Sense
 - What about Laplace?
@@ -402,11 +467,17 @@ R(x,y)=\sqrt{(R_x(x,y))^2+(R_y(x,y))^2}
 $$
 ---
 
+```yaml
+hideInToc: true
+```
 # What Does This Mean
 - You said we have a first derivative and a second derivative, what is the difference?
 - The first derivative produces thicker edges while the second derivative is more sensative to micro details like thin edges and isolated points (noise)
 ---
 
+```yaml
+hideInToc: true
+```
 # The results
 <div grid="~ cols-2">
 <div>
@@ -429,7 +500,7 @@ Sobel Response
 
 ---
 
-# The Next Step
+# Thresholding
 
 - We need to isolate the detected edges, we simply threshold
 - Using this we convert from gray scale to binary
@@ -442,8 +513,10 @@ Sobel Response
 	- It is **not necessary** to have just one threshold for the image — we can use the concept of **Adaptive Thresholding** or **Multiple Thresholds** to generate a separate threshold for **each pixel** or for **groups of pixels**.
 ---
 
-# Statistical Threshold
-
+```yaml
+hideInToc: true
+```
+## Statistical Threshold
 <div grid="~ cols-2">
 <div>
 
@@ -459,7 +532,10 @@ Sobel Response
 
 ---
 
-# Algorithmic Threshold
+```yaml
+hideInToc: true
+```
+## Algorithmic Threshold
 - Ready-made Algorithms
 	- There are several algorithms for selecting the optimal threshold.  
 	- The most famous of these is **Otsu's algorithm**.  
@@ -468,7 +544,10 @@ Sobel Response
 <img src="./data/02/otsu.png">
 ---
 
-# Multiple/Adaptive Thresholds
+```yaml
+hideInToc: true
+```
+## Multiple/Adaptive Thresholds
 - In this case, we can divide the image into several sections  
 - Calculate the threshold for each section  
 - Apply the resulting threshold to each section
@@ -487,6 +566,9 @@ Sobel Response
 
 ---
 
+```yaml
+hideInToc: true
+```
 # Algorithmic Edge Detection
 ## Canny Edge Detection
 - Compute the overall response and Sobel direction (Intensity Gradient):  
@@ -500,12 +582,18 @@ $$
 $$
 ---
 
+```yaml
+hideInToc: true
+```
 # Algorithmic Edge Detection
 ## Canny Edge Detection
 <img src="./data/02/direction.png" style="width: 90%">
 
 ---
 
+```yaml
+hideInToc: true
+```
 # Algorithmic Edge Detection
 ## Canny Edge Detection
 - Apply Non-Maximum Suppression:  
@@ -518,6 +606,9 @@ $$
 
 ---
 
+```yaml
+hideInToc: true
+```
 # Algorithmic Edge Detection
 ## Canny Edge Detection
 - Apply Non-Maximum Suppression:
@@ -535,6 +626,9 @@ $$
 
 ---
 
+```yaml
+hideInToc: true
+```
 # Algorithmic Edge Detection
 ## Canny Edge Detection
 <div grid="~ cols-2">
@@ -559,6 +653,9 @@ Otherwise, it is **ignored**.
 - Blob detection is a technique in computer vision used to identify regions in an image that differ in properties (such as brightness or color) compared to surrounding regions, often used to detect features like spots, corners, or objects
 ---
 
+```yaml
+hideInToc: true
+```
 # BLOB
 ## Laplacian of Gaussian (LoG)
 - Principle:
@@ -572,18 +669,27 @@ Otherwise, it is **ignored**.
 	2.  Find local maxima and minima across space and scale. These correspond to blobs. 
 ---
 
+```yaml
+hideInToc: true
+```
 # BLOB
 ## Laplacian of Gaussian (LoG)
 - Pros: Accurate detection of blob size and location.
 - Cons: Computationally expensive because the Laplacian has to be computed for multiple scales.
 ---
 
+```yaml
+hideInToc: true
+```
 # BLOB
 ## Laplacian of Gaussian (LoG)
 - The Mexian Hat Shap is the shap of LoG
 	<img src="./data/02/LoG.png" style="width: 60%">
 ---
 
+```yaml
+hideInToc: true
+```
 # BLOB
 ## Difference of Gaussian (DoG)
 - Principle:
@@ -596,6 +702,9 @@ Otherwise, it is **ignored**.
 	3. Detect local extrema in space and scale as blob locations.
 ---
 
+```yaml
+hideInToc: true
+```
 # BLOB
 ## Difference of Gaussian (DoG)
 - Pros:
@@ -605,6 +714,9 @@ Otherwise, it is **ignored**.
 	- Approximation, slightly less accurate than exact LoG.
 ---
 
+```yaml
+hideInToc: true
+```
 # BLOB
 ## Difference of Gaussian (DoG)
 <div grid="~ cols-2">
@@ -617,6 +729,9 @@ Otherwise, it is **ignored**.
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # BLOB
 ## Connected Component
 - A connected component is a set of pixels in a binary image (or sometimes in a grayscale image after thresholding) that are connected to each other and share similar properties (like intensity or color).
@@ -644,6 +759,9 @@ Otherwise, it is **ignored**.
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 - We need a method to handle the inconsistencies with edges
 - As result we use morphological operations (dilation, erosion, opening and closing)
@@ -655,6 +773,10 @@ Otherwise, it is **ignored**.
 	- Structuring elements can be specified in terms of both foreground and background pixels. In addition, structuring elements sometimes contain so-called “don’t care” elements, denoted by ×, signifying that the value of that particular element in the SE does not matter
 ---
 
+
+```yaml
+hideInToc: true
+```
 # Morphology
 <div grid="~ cols-2">
 <div>
@@ -671,6 +793,9 @@ Otherwise, it is **ignored**.
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 <div grid="~ cols-2">
@@ -686,6 +811,9 @@ Otherwise, it is **ignored**.
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Reflection
 - Defined by the following equation
@@ -697,6 +825,9 @@ $(B)_z=\{c | c=b+z, for~b \in B\}$
 - Meaning $(B)_z(x,y)=B(x+z_1,y+z_2)$
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 An Exmaple
@@ -704,6 +835,9 @@ An Exmaple
 <img src="./data/02/E1.png" style="width: 70%">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 An Exmaple
@@ -711,6 +845,9 @@ An Exmaple
 <img src="./data/02/E2.png" style="width: 80%">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 An Exmaple
@@ -718,6 +855,9 @@ An Exmaple
 <img src="./data/02/E3.png" style="width: 80%">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 An Exmaple
@@ -725,6 +865,9 @@ An Exmaple
 <img src="./data/02/E4.png" style="width: 80%">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 An Exmaple
@@ -732,6 +875,9 @@ An Exmaple
 <img src="./data/02/E5.png" style="width: 80%">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 An Exmaple
@@ -739,6 +885,9 @@ An Exmaple
 <img src="./data/02/E6.png" style="width: 80%">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 A test
@@ -746,6 +895,9 @@ A test
 <img src="./data/02/Test.png">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 
 A test
@@ -760,6 +912,9 @@ A test
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Erosion
 - Defined by
@@ -771,12 +926,18 @@ $A \ominus B~=~\{z | (B)_z~\subseteq~A~ \}$
 - Erosion shrinks an object
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Erosion
 
 <img src="./data/02/erosion.png" style="width: 80%">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Dilation
 
@@ -789,12 +950,18 @@ $A \oplus B~=~\{z | [(B)_z~\cap~A~]~\subseteq~A~ \}$
 - Dilation grows the object
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Dilation
 
 <img src="./data/02/dilation.png" style="width: 80%">
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Erosion & Dilation
 
@@ -812,6 +979,9 @@ $A \oplus B~=~\{z | [(B)_z~\cap~A~]~\subseteq~A~ \}$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Erosion & Dilation
 
@@ -824,6 +994,9 @@ $$
 $$
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Opening
 
@@ -843,6 +1016,9 @@ $$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Closing
 
@@ -862,6 +1038,9 @@ $$
 </div>
 ---
 
+```yaml
+hideInToc: true
+```
 # Morphology
 ## Opening & Closing
 <img src="./data/02/onc.png" style="height: 80%">

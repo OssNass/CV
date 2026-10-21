@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Syllabas.md",
+                "file": "Lecture-02.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Syllabas"
+              "title": "Lecture-02"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Syllabas.md",
+                "file": "Lecture-01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,12 +169,24 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "a9c26f76e19c6dde",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Lecture-01.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -190,22 +202,34 @@
   },
   "active": "0d1210518ed8c2e9",
   "lastOpenFiles": [
+    "data/02/WeakEdges.png",
+    "data/02/Test.png",
+    "data/02/opening.png",
+    "data/02/onc.png",
+    "data/02/Morphology.png",
+    "data/02/example.png",
+    "data/02/erosion.png",
+    "data/02/end.png",
+    "data/02/E6.png",
+    "data/02/E5.png",
+    "data/02/E4.png",
+    "data/02",
+    "data/2",
+    "Lecture-01.md",
+    "Syllabas.md",
+    "data/01/rgb.mp4",
+    "data/01/z0001-0120.mp4",
+    "Lectures.md",
+    "data/01",
+    "data",
+    "Lecture-1.md",
     "slides.md",
     "README.md",
-    "Syllabas.md",
-    "Lectures.md",
-    "Lecture-1.md",
     "_tmp_268102_6e8d511fb38f06547fc2b5cd001d7809",
     "pages/imported-slides.md",
     "_tmp_267978_95ff45f9fceb649514d5ec922851659f",
     "pnpm-workspace.yaml.3962550386",
     "pnpm-workspace.yaml.3799980947",
-    "package.json.2239058394",
-    "node_modules/@yarnpkg",
-    "node_modules/@larsgw",
-    "node_modules/@citation-js",
-    "node_modules/@jxpeng98",
-    "_tmp_267911_a4d352717496f8ce3d0abfa9fce3e753",
     "CV-2026-2027/pages/imported-slides.md",
     "CV-2026-2027/slides.md",
     "CV-2026-2027/README.md"

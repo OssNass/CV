@@ -1,4 +1,4 @@
-name: Deploy multiple Slidev lectures with Yarn (Node 22)
+name: Deploy multiple Slidev lectures with PNPM (Node 24)
 
 on:
   push:
@@ -17,22 +17,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node 22
+      - name: Setup Node 24
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
-      - name: Install Yarn
-        run: npm install -g yarn
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
         run: |
           if [ -f "package.json" ]; then
-            yarn install
+            pnpm install
           fi
 
       - name: Install Slidev CLI
-        run: yarn global add @slidev/cli
+        run: pnpm add @slidev/cli -g
 
       - name: Build all root-level .md files
         run: |

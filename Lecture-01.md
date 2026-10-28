@@ -1,5 +1,5 @@
 ---
-theme: scholarly
+theme: rockdove
 class: text-center
 transition: slide-left
 title: Welcome to Slidev
@@ -68,7 +68,7 @@ hideInToc: true
 # Image Representation
 - In computer science, image processing is derived from signal processing.
 - Why? Because an image is a signal, just like audio, at every second we get the amplitude of the audio (the sound), while in image at every pixel we get the light wave length (the color) as seen in the shape
-<img src="./data/01/avi.jpg" style="width: 90%">
+<img src="./data/01/avi.jpg" style="width: 75%">
 ---
 
 ```yaml
@@ -91,7 +91,7 @@ hideInToc: true
 # Image Representation
 - Image representation in computer is a matrix (2D or more)
 - So when we say $I(25,10,0)$ means we need to get the value of the pixel located at $x=25,y=10$ in the color channel 0 (first channel) as seen in the image below (represents a RGB image)
-<img src="./data/01/image_rep.jpg" style="width: 90%">
+<img src="./data/01/image_rep.jpg" style="width: 75%">
 ---
 
 ## Color Systems
@@ -107,7 +107,6 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
-## Color Systems
 ### RGB
 - The most common color system, it is defined as an additive color system, meaning it is based on the concept of lighting up dark background using 3 color components (channels) based on the human vision
 	- Red
@@ -120,16 +119,14 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
-## Color Systems
 ### RGB
 - The following image represents the RGB color cube, it is a 3D Cartesian coordinate system, the start $(0,0,0)$ is black (no light) while the end, usually $(255,255,255)$, represents the white color
-<video style="width: 90%" autoplay muted loop playsinline><source src="./data/01/rgb.mp4" type="video/mp4"/></video>
+<video style="width: 85%" autoplay muted loop playsinline><source src="./data/01/rgb.mp4" type="video/mp4"/></video>
 ---
 
 ```yaml
 hideInToc: true
 ```
-## Color Systems
 ### HSV
 - Instead of representing the individual colors, we use a cone!
 - HSV represents a color using 3 components:
@@ -143,18 +140,16 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
-## Color Systems
 ### HSV
 - The Hue value 0 represents the color red
 - the higher the saturation, the more vibrant/bright the color (فاقع)
 - The value indicates the amount of light/brightness from pure black ($0\%$) to full color ($100\%$).
-<img src="./data/01/HSV.jpg" style="width: 85%">
+<img src="./data/01/HSV.jpg" style="width: 80%">
 ---
 
 ```yaml
 hideInToc: true
 ```
-## Color Systems
 ### HSV
 - To convert from RGB to HSV we use these equations:
 
@@ -186,7 +181,6 @@ $$
 ```yaml
 hideInToc: true
 ```
-## Color Systems
 ### CIE L\*A\*B*
 - Humans see a broad spectrum of colors and color shades. However, color perception differs between individuals. Not only that, but color across devices such as monitors and printers can vary significantly unless these devices are properly calibrated
 - Even among the wavelength of light, we don't perceive the same colors equally:
@@ -203,7 +197,6 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
-## Color Systems
 ### CIE L\*A\*B*
 <div grid="~ cols-2 gap-1">
 <div>
@@ -220,7 +213,6 @@ hideInToc: true
 </div>
 ---
 
-## Color System
 ### YUV & Y'CbCr
 - Both **YUV** and **YCbCr** belong to a family of color spaces that separate luminance (brightness) from chrominance (color)
 - Unlike CIELAB, which is designed to model uniform human visual perception, YUV and YCbCr were designed for transmission and compression efficiency in analog broadcast, video encoding, and image processing.
@@ -235,7 +227,6 @@ hideInToc: true
 ```yaml
 hideInToC: true
 ```
-## Color System
 ### YUV & YCbCr
 -  Key Differences: YUV vs. Y'CbCr
 	- While the terms are often used interchangeably in software documentation, they refer to different domains:
@@ -252,7 +243,6 @@ hideInToC: true
 ```yaml
 hideInToC: true
 ```
-## Color System
 ### YUV & Y'CbCr
 **RGB -> Y'CbCr**
 $$\begin{aligned} Y' &= 0.299 R' + 0.587 G' + 0.114 B' \\ Cb &= 128 - 0.168736 R' - 0.331264 G' + 0.500 B' \\ Cr &= 128 + 0.500 R' - 0.418688 G' - 0.081312 B' \end{aligned}$$
@@ -260,7 +250,6 @@ $$\begin{aligned} Y' &= 0.299 R' + 0.587 G' + 0.114 B' \\ Cb &= 128 - 0.168736 R
 $$\begin{aligned} Y &= 0.299 R' + 0.587 G' + 0.114 B' \\ U &= -0.147137 R' - 0.288863 G' + 0.436000 B' \\ V &= 0.615000 R' - 0.514988 G' - 0.100012 B' \end{aligned}$$
 ---
 
-## Color System
 ### Channel/Color Depth
 - This value describes how many bits are used to store the value of a certain channel within a color space. 
 	- The most widely used value is 8 bits, which is why 255 is the standard maximum channel value in common RGB spaces ($2^8 = 256$ total values, $0\text{--}255$).
@@ -276,7 +265,6 @@ $$\begin{aligned} Y &= 0.299 R' + 0.587 G' + 0.114 B' \\ U &= -0.147137 R' - 0.2
 ```yaml
 hideInToc: true
 ```
-## Color System
 ### Channel/Color Depth
 - There is a common computing technique that simplifies operations across different channel depths: **converting pixel values to floating-point numbers (`float` or `double`).**
 - Instead of working directly with an integer matrix (e.g., 0–255 for 8-bit or 0–1023 for 10-bit), the image matrix is normalized so that:
@@ -285,8 +273,13 @@ hideInToc: true
 - **Why Use This Technique?**
 	1. **Simplified Codebase:** Algorithms (e.g., brightness adjustments, filters, blending, edge detection) can be written using a single unified scale without needing special branch logic for 8-bit, 10-bit, or 16-bit inputs.
 	2. **Precision & Overflow Prevention:** Intermediate calculations won't suffer from integer truncation or wraparound overflow errors (e.g., $250 + 20$ wrapping around to $14$ in 8-bit `uint8`).
-- Once all matrix operations and transformations are complete, the values are scaled back and converted to the target integer data type.
+---
 
+```yaml
+hideInToc: true
+```
+### Channel/Color Depth
+- Once all matrix operations and transformations are complete, the values are scaled back and converted to the target integer data type.
 > **Trade-off:** While this simplifies algorithm design, it increases both memory usage and compute overhead. A `double` takes 8 bytes per channel value compared to just 1 byte for an 8-bit integer (`uint8`), and floating-point matrix arithmetic is generally more resource-intensive than integer operations.
 
 > **In The Real World** We usually use float data type (4 bytes) instead of double (8 bytes) to balance speed, memory and accuracy
@@ -296,7 +289,6 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
-## Color System
 ### Channel/Color Depth
 - What if we had just one color channel?
 - In that case the image is grayscale, not color
@@ -322,6 +314,12 @@ hideInToc: true
 		* **Sensor B:** Area of $20\text{ cm}^2$ (e.g., full-frame / professional camera sensor)
 	- **Which sensor yields better image quality?**  
 		- **Sensor B.** Even though both capture the exact same resolution ($50\text{ MP}$), the larger surface area gives Sensor B much larger individual pixels (photosites). 
+---
+
+```yaml
+hideInToc: true
+```
+## Sensor Size
 - **Why Sensor Size Matters?**
 	1. **Light Gathering (Photons per Pixel):** Larger photosites physically capture more light during an exposure.
 	2. **Noise Reduction & Dynamic Range:** Higher light gathering improves the Signal-to-Noise Ratio (SNR), drastically reducing visual grain/noise in low-light conditions.
@@ -507,7 +505,7 @@ hideInToc: true
 ## A- Basic Operations
 ### 2- Multiplication
 - In this image we show multiplying hue channel only in HSV image by a scalar value
-<img src="./data/01/times_h.jpg">
+<img src="./data/01/times_h.jpg" style="width: 90%">
 ---
 
 ```yaml
@@ -625,7 +623,7 @@ hideInToc: true
 - Applying the following filters using convulsion will result in 2 images, one for vertical and one for horizontal edges
 <img src="./data/01/prewitt.jpg">
 - Ok doc, how combine both resulting image (also called filter responses) into a single image?
-- Finally, we get to use that theorem from middle school, the **Pythagorean Theorem
+- Finally, we get to use that theorem from middle school, the **Pythagorean Theorem**
 ---
 
 ```yaml
@@ -650,7 +648,7 @@ hideInToc: true
 - More explanation will be provided in the next lecture
 </div>
 <div>
-<img src="./data/01/laplace.jpg" style="width: 75%">
+<img src="./data/01/laplace.jpg" style="width: 65%">
 </div>
 </div>
 ---
@@ -669,7 +667,7 @@ hideInToc: true
 ```
 ## B- Filter Operations
 - **LoG (Simplified)**
-<img src="./data/01/log.png" style="width: 78%">
+<img src="./data/01/log.png" style="width: 65%">
 ---
 
 ```yaml
@@ -677,7 +675,7 @@ hideInToc: true
 ```
 ## B- Filter Operations
 - **DoG (Simplified)**
-<img src="./data/01/dog.png">
+<img src="./data/01/dog.png" style="width: 90%">
 ---
 
 ```yaml
@@ -688,7 +686,7 @@ hideInToc: true
 - Contrast is the difference in brightness and/or color that makes an object distinguishable.
 - To examine contrast, we use a histogram, which shows the frequency of each color level.
 - We demonstrate this with a grayscale image (if there is more than one channel, there is a separate histogram for each channel). Values must be integers to simplify calculations.
-<img src="./data/01/contrast.jpg" style="width: 95%">
+<img src="./data/01/contrast.jpg" style="width: 70%">
 ---
 
 ```yaml

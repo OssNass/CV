@@ -1,5 +1,5 @@
 ---
-theme: scholarly
+theme: rockdove
 class: text-center
 transition: slide-left
 title: Welcome to Slidev
@@ -56,6 +56,7 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
+
 # Fourier Transformation
 ## Fast Fourier Transformation
 - The story about fast Fourier transformation is based on strict deadlines, nuclear weapons, USSR and USA
@@ -65,7 +66,7 @@ hideInToc: true
 
 <div grid="~ cols-2">
 
-<div class="text-center">
+<div class="text-center" style="font-size: 0.9rem">
 
 FT
 $$
@@ -77,7 +78,7 @@ x(t) = \int_{-\infty}^{\infty} X(f) e^{j 2 \pi f t} \, df
 $$
 </div>
 
-<div class="text-center">
+<div class="text-center" style="font-size: 0.9rem">
 
 DFT
 $$
@@ -256,6 +257,7 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
+
 # Convolution and Correlation
 ## Applying Filters
 - When A filter (kernel/mask) get applied to image, we apply on each pixel independently
@@ -263,7 +265,7 @@ hideInToc: true
 - Let's say we want to apply the filter k on the image S at the selected pixel (the neighborhood is the red square)
 <div grid="~ cols-2">
 <div>
-<img src="./data/02/filter.png" style="width:90%">
+<img src="./data/02/filter.png" style="width:85%">
 </div>
 <div>
 
@@ -276,6 +278,7 @@ new PixelValue= -1\times107+-1\times54+-1\times19+
 $$
 </div>
 </div>
+
 ---
 
 ```yaml
@@ -356,6 +359,7 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
+
 # Image Gradient (Derivative)
 - Sobel, Prewitt and Scharr calculate the first derivative
 - Laplace calculate the second derivative
@@ -422,6 +426,7 @@ G_y =
 $$
 </div>
 </div>
+
 ---
 
 ```yaml
@@ -594,15 +599,26 @@ hideInToc: true
 ```yaml
 hideInToc: true
 ```
+
 # Algorithmic Edge Detection
 ## Canny Edge Detection
 - Apply Non-Maximum Suppression:  
 	- Non-Maximum Suppression (NMS) is a technique used to refine the results of a convolution operation. A pixel's value is retained only if it is the maximum value within its local neighborhood (e.g., a 3×33 \times 33×3 window). If the pixel's value is smaller than any of its neighbors, it is suppressed (set to zero)
 	- The standard NMS works as follows:
-	$$
-		E =IFF~ ~E >A,B,C,D,F,G,H,I => E~ ~else~0
-	$$
-<img src="./data/02/values.png" style="width:30%">
+<div grid="~ cols-2 gap-40">
+<div>
+
+$$
+E =IFF~ ~E >A,B,C,D,F,G,H,I => E~ ~else~0
+$$
+
+</div>
+<div>
+<img src="./data/02/values.png" style="width:50%">
+</div>
+
+
+</div>
 
 ---
 
@@ -744,19 +760,17 @@ hideInToc: true
 	- Scan the image and label each connected region with a unique identifier. 
 	- All pixels with the same label belong to the same connected component.
 ---
-# Morphology
-<div grid="~ cols-2 gap-4">
-<div>
 
-- Sometimes when detecting edges we get cases where we have weak edges, extra edges, and incomplete edges
-- As we see in the image on the side, the letters have incomplete edges
-- Weak Edges happen because two objects are close to each other, in which situation, sometimes edge detection methods creates a link between the edges
-- Extra edges are like spurs or spikes on the original objects
-</div>
-<div>
-<img src="./data/02/WeakEdges.png">
-</div>
-</div>
+# Morphology
+<div grid="~ cols-2 gap-4"> <div>
+
+- Sometimes when detecting edges we get cases where we have weak edges, extra
+edges, and incomplete edges - As we see in the image on the side, the letters
+have incomplete edges - Weak Edges happen because two objects are close to each
+other, in which situation, sometimes edge detection methods creates a link
+between the edges - Extra edges are like spurs or spikes on the original objects
+</div> <div> <img src="./data/02/WeakEdges.png"> </div> </div>
+
 ---
 
 ```yaml
@@ -771,6 +785,7 @@ hideInToc: true
 - We use morphology with two types of sets of pixels: objects and structuring elements:
 	- Objects are defined as sets of foreground pixels
 	- Structuring elements can be specified in terms of both foreground and background pixels. In addition, structuring elements sometimes contain so-called “don’t care” elements, denoted by ×, signifying that the value of that particular element in the SE does not matter
+
 ---
 
 
@@ -929,10 +944,12 @@ $A \ominus B~=~\{z | (B)_z~\subseteq~A~ \}$
 ```yaml
 hideInToc: true
 ```
+
 # Morphology
 ## Erosion
 
-<img src="./data/02/erosion.png" style="width: 80%">
+<img src="./data/02/erosion.png" style="width: 70%">
+
 ---
 
 ```yaml
@@ -953,10 +970,12 @@ $A \oplus B~=~\{z | [(B)_z~\cap~A~]~\subseteq~A~ \}$
 ```yaml
 hideInToc: true
 ```
+
 # Morphology
 ## Dilation
 
-<img src="./data/02/dilation.png" style="width: 80%">
+<img src="./data/02/dilation.png" style="width: 70%">
+
 ---
 
 ```yaml
@@ -1044,4 +1063,4 @@ hideInToc: true
 # Morphology
 ## Opening & Closing
 <img src="./data/02/onc.png" style="height: 80%">
----
+

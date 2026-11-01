@@ -7,6 +7,7 @@ mdc: true
 author: Dr. Ossama Nasser
 exportFilename: "3"
 layout: cover
+hideInToc: true
 ---
 
 # Computer Vision

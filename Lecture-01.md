@@ -2,7 +2,7 @@
 theme: rockdove
 class: text-center
 transition: slide-left
-title: Welcome to Slidev
+title: "Lecture 1: Intorduction to Computer Vision"
 mdc: true
 author: Dr. Ossama Nasser
 exportFilename: "1"

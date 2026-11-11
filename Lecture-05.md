@@ -153,14 +153,13 @@ hideInToc: true
 - The initially found extrema are at integer pixel positions, but the true extremum may be between pixels.
 - SIFT fits a **3D quadratic function** (Taylor expansion) to the local DoG values around the keypoint:
 $$
-D(x)=D+\frac{\delta D^T}{\delta x}+ \frac{1}{2}x^T\frac{\delta^2D}{\delta x^2}x
+D(\mathbf{x})=D+\frac{\delta D^T}{\delta \mathbf{x}}+ \frac{1}{2}\mathbf{x}^T\frac{\delta^2D}{\delta \mathbf{x}^2}\mathbf{x}
 $$
 
-- where  
-$$
- \mathbf{x}=(x,y,\sigma)
-$$
-- x is offsets in position and scale.
+- where
+	- $\mathbf{x}=(x,y,\sigma)$ is offsets vector from the sample point.
+	- $\frac{\partial D}{\partial \mathbf{x}}$ is the gradient vector (a $3 \times 1$ matrix of first partial derivatives).
+	- $\frac{\partial^2 D}{\partial \mathbf{x}^2}$ is the Hessian matrix (a $3 \times 3$ matrix of second partial derivatives)
 ---
 
 
@@ -170,6 +169,8 @@ hideInToc: true
 ## Keypoint Localization
 ### 1. Refining the Keypoint Location (Sub-pixel Accuracy)
 - Solving: 
+	- To find the true location of the extremum (where the derivative of the quadratic function equals zero), we take the derivative of $D(\mathbf{x})$ with respect to $\mathbf{x}$ and set it to zero:
+	$$\frac{\partial D}{\partial \mathbf{x}} + \left( \frac{\partial^2 D}{\partial \mathbf{x}^2} \right) \hat{\mathbf{x}} = 0$$
 $$ \hat{\mathbf{x}} = -\left( \frac{\partial^2 D}{\partial \mathbf{x}^2} \right)^{-1} \left( \frac{\partial D}{\partial \mathbf{x}} \right) $$
 - gives the **sub-pixel** (and sub-scale) offset.
 	- If $\hat{\mathbf{x}}$ is larger than 0.5 in any dimension, the keypoint is shifted to a nearby position and recomputed.
@@ -197,9 +198,10 @@ hideInToc: true
 $$
 H = \begin{bmatrix} D_{xx} & D_{xy} \\ D_{xy} & D_{yy} \end{bmatrix}
 $$
-- Eigenvalues of H tell whether the structure is:
-	- blob-like (good keypoint)  
-	- edge-like (reject)   
+- Eigenvalues of H (let's call them $\alpha$ and $\beta$, where $\alpha$ is the larger eigenvalue and $\beta$ is the smaller one) tell whether the structure is:
+	- blob-like (good keypoint)  $\alpha \approx \beta$
+	- edge-like (reject)  $\alpha \gg \beta$ 
+	
 ---
 
 
@@ -212,6 +214,7 @@ hideInToc: true
 $$
 \frac{(\text{Tr}(H))^2}{\det(H)} < \frac{(r+1)^2}{r}
 $$
+- $Tr(H)$ is trace of H, $\text{Tr}(H) = D_{xx} + D_{yy} = \alpha + \beta$
 - where r is the allowed edge ratio (typically 10).
 - If this inequality fails, the keypoint lies on an edge → **discarded**.
 - Hessian Matrix:
@@ -240,7 +243,7 @@ $$
 - A descriptor is created by sampling gradients around the keypoint, weighted by a Gaussian window.
 - These samples are grouped using a directional histogram on 4x4 sub-regions
 - These are accumulated into 4×4 sub‑regions with 8 orientation bins → 128‑dimensional vector.
-</div>
+</div>	
 <div>
 <img src="./data/05/sift-desc.png" style="width: 80%">
 </div>

@@ -1,0 +1,1 @@
+var e=`/CV/Lecture-06/assets/CNN-wR7gg6HG.jpg`;export{e as t};
